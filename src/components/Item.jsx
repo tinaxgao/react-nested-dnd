@@ -3,8 +3,8 @@ import { useDrag } from "react-dnd";
 
 function Item({ id, name }) {
   const [{ isDragging }, drag] = useDrag({
-    type: "item",
-    item: { id },
+    type: "listItem",
+    item: { id, name, type: "listItem" },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),

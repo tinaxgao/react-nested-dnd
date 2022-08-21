@@ -31,7 +31,7 @@ const List = [
     type: "subList",
     id: "sl-1",
     name: "Sub List 1",
-    children: [
+    sublist: [
       {
         type: "listItem",
         id: "i-6",

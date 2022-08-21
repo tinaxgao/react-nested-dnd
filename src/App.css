@@ -23,3 +23,29 @@ li {
   margin: 10px auto;
   border: 1px solid black;
 }
+
+.dropZone {
+  flex: 0 0 auto;
+  height: 40px;
+  transition: 200ms all;
+  border: 1px dashed slateblue;
+}
+
+.dropZone:nth-of-type(2n) {
+  display: none;
+}
+
+.dropZone.horizontalDrag {
+  width: 40px;
+  height: auto;
+}
+
+.dropZone:not(.horizontalDrag).isLast {
+  flex: 1 1 auto;
+}
+
+.dropZone.active,
+.trashDropZone.active {
+  background: #bcbcbc;
+  transition: 100ms all;
+}
