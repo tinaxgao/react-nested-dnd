@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-nested-dnd/static/css/main.b817684d.css",
+    "main.js": "/react-nested-dnd/static/js/main.0f3ff4ac.js",
+    "static/js/787.90cf4be3.chunk.js": "/react-nested-dnd/static/js/787.90cf4be3.chunk.js",
+    "index.html": "/react-nested-dnd/index.html",
+    "main.b817684d.css.map": "/react-nested-dnd/static/css/main.b817684d.css.map",
+    "main.0f3ff4ac.js.map": "/react-nested-dnd/static/js/main.0f3ff4ac.js.map",
+    "787.90cf4be3.chunk.js.map": "/react-nested-dnd/static/js/787.90cf4be3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b817684d.css",
+    "static/js/main.0f3ff4ac.js"
+  ]
+}
