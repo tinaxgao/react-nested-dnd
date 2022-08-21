@@ -8,8 +8,9 @@ function DragDrop() {
   const [list, setList] = useState(List);
 
   const [{ isOver }, drop] = useDrop({
-    accept: "item",
+    accept: ["item", "list"],
     drop: (item) => {
+      console.log("dragged item: ", item); // TODO: remove this line
       addItemToList(item.id);
     },
     collect: (monitor) => ({
@@ -27,24 +28,35 @@ function DragDrop() {
     <>
       {/* List to drop stuff into: */}
       <div className="list" ref={drop}>
-        <h5>List</h5>
+        <h3>LIST</h3>
 
         {list.map((item) => {
-          console.log("1. item: ", item);
+          console.log("1. item: ", item); // TODO: remove
 
           if (item.type === "listItem") {
             return <Item key={item.id} id={item.id} name={item.name} />;
           } else if (item.type === "subList") {
-            return <div key={item.id}>{item.name}</div>;
-          } else {
-            return null;
+            if (item.children) {
+              return (
+                <div key={item.id} className="sub-list">
+                  <h5>{item.name}</h5>
+
+                  {item.children.map((child) => {
+                    return (
+                      <Item key={child.id} id={child.id} name={child.name} />
+                    );
+                  })}
+                </div>
+              );
+            }
           }
+          return null;
         })}
       </div>
 
-      {/* Sub-list that can be dragged into a main List */}
-      <div className="sub-list">
-        <h5>Sub-list</h5>
+      {/* Sub-list that can be dragged into a main List: */}
+      <div className="sub-list" ref={drop}>
+        <h5>SubList</h5>
       </div>
 
       {/* Items to be dragged into a list: */}

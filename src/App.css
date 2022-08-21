@@ -1,23 +1,25 @@
 .App {
   text-align: center;
+  margin: auto;
 }
 
 li {
   list-style-type: none;
-  margin: 10px;
+  margin: 10px auto;
+  width: 300px;
   border: 1px solid gray;
 }
 
 .list {
   min-height: 350px;
   min-width: 250px;
-  margin: 10px;
+  margin: 10px auto;
   border: 2px solid black;
 }
 
 .sub-list {
   min-height: 200px;
-  min-width: 200px;
-  margin: 10px;
+  width: 400px;
+  margin: 10px auto;
   border: 1px solid black;
 }
