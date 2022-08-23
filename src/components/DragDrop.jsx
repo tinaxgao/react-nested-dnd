@@ -14,7 +14,6 @@ function DragDrop() {
   const [{ isOver }, drop] = useDrop({
     accept: ["listItem", "list", "subList"],
     drop: (item) => {
-      console.log("dragged item: ", item); // TODO: remove this line
       handleDrop(item);
     },
     collect: (monitor) => ({
@@ -30,13 +29,9 @@ function DragDrop() {
     }
 
     if (item.type === "subList") {
-      console.log("dropped sublist: ", item); // TODO: remove this line
       setList((list) => [...list, item]);
     }
   };
-
-  console.log("sublist:", sublist); // TODO: remove this line
-  console.log("list:", list); // TODO: remove this line
 
   return (
     <>

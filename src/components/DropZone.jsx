@@ -14,7 +14,6 @@ const DropZone = ({ items, setItems, sublist, setSublist }) => {
   const [{ isOver }, drop] = useDrop({
     accept: ["listItem", "list", "subList"],
     drop: (item) => {
-      console.log("subList dragged item: ", item); // TODO: remove this line
       handleDrop(item.id);
     },
     collect: (monitor) => ({
@@ -31,7 +30,7 @@ const DropZone = ({ items, setItems, sublist, setSublist }) => {
   return (
     <div
       ref={drag}
-      style={{ backgroundColor: isDragging ? "aquamarine" : "white" }}
+      style={{ backgroundColor: isDragging ? "yellow" : "white", width: "400px", margin: "auto" }}
     >
       <div className="sub-list" ref={drop}>
         <h5>SubList</h5>

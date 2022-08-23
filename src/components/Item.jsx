@@ -14,7 +14,7 @@ function Item({ id, name }) {
     <li
       ref={drag}
       id={id}
-      style={{ backgroundColor: isDragging ? "aquamarine" : "white" }}
+      style={{ backgroundColor: isDragging ? "yellow" : "white" }}
     >
       {name}
     </li>
