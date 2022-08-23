@@ -27,18 +27,18 @@ const List = [
     id: "i-5",
     name: "Fifth Item",
   },
-  {
-    type: "subList",
-    id: "sl-1",
-    name: "Sub List 1",
-    sublist: [
-      {
-        type: "listItem",
-        id: "i-6",
-        name: "Sixth Item",
-      },
-    ],
-  },
+  // {
+  //   type: "subList",
+  //   id: "sl-1",
+  //   name: "Sub List 1",
+  //   sublist: [
+  //     {
+  //       type: "listItem",
+  //       id: "i-6",
+  //       name: "Sixth Item",
+  //     },
+  //   ],
+  // },
 ];
 
 export { ListItems, List };
